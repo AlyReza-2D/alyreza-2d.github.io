@@ -1,0 +1,47 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title>
+  <style>
+    body {
+      background-color: blue;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: white;
+      color: blue;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, this is my first website!</h1>
+  <button onclick="changeColors()">Change Colors</button>
+
+  <script>
+    function changeColors() {
+      const body = document.body;
+      const currentBackgroundColor = body.style.backgroundColor;
+
+      if (currentBackgroundColor === 'blue') {
+        body.style.backgroundColor = 'white';
+        body.style.color = 'blue';
+      } else {
+        body.style.backgroundColor = 'blue';
+        body.style.color = 'white';
+      }
+    }
+  </script>
+</body>
+</html>
